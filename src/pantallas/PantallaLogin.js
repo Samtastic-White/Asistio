@@ -102,6 +102,7 @@ export default function PantallaLogin({ navigation }) {
   const ElipseOpacidad = useSharedValue(0);
 
   useEffect(() => {
+    /* Keyboard.addListener suscribe una función al evento 'keyboardDidShow' */
     const mostrarTeclado = Keyboard.addListener('keyboardDidShow', (e) => {
       setTecladoVisible(true);
       const alturaTeclado = e.endCoordinates.height;
@@ -292,7 +293,7 @@ export default function PantallaLogin({ navigation }) {
     transform: [
       { translateY: posicionTitulo.value },
       { translateY: tecladoVisible
-        ? withTiming(-height * 0.2, { duration: 100 })
+        ? withTiming(-height * 0, { duration: 100 })
         : withTiming(0, { duration:100 })
       }
     ],
@@ -311,7 +312,7 @@ export default function PantallaLogin({ navigation }) {
     transform: [
       { scale: auraScale.value },
       { translateY: tecladoVisible
-        ? withTiming(-height * 0.25, { duration: 100 })
+        ? withTiming(-height * 0, { duration: 100 })
         : withTiming(0, { duration: 100 })
       },
     ]
@@ -324,7 +325,7 @@ export default function PantallaLogin({ navigation }) {
       { rotate: `${CirculoContenedorRotacion.value}deg` },
       { 
         translateY: tecladoVisible 
-          ? withTiming(-height * 0.3, { duration: 100 })
+          ? withTiming(-height * 0, { duration: 100 })
           : withTiming(0, { duration: 100 })
       },
     ],
@@ -351,7 +352,7 @@ export default function PantallaLogin({ navigation }) {
         { rotate: `${CirculoHorizontalRotacion.value}deg` },
         { 
           translateY: tecladoVisible 
-            ? withTiming(-height * 0.15, { duration: 100 })
+            ? withTiming(-height * 0, { duration: 100 })
             : withTiming(0, { duration: 100 })
         },
       ],
@@ -385,7 +386,7 @@ export default function PantallaLogin({ navigation }) {
       { translateY: CirculosPequeñosEntradaY.value + y },
       { 
         translateY: tecladoVisible 
-          ? withTiming(-height * 0.1, { duration: 100 })
+          ? withTiming(-height * 0, { duration: 100 })
           : withTiming(0, { duration: 100 })
       }
     ],

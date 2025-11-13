@@ -29,7 +29,7 @@ export default function PantallaActivacionCuenta({ navigation }) {
   });
 
   const onDone = () => {
-    navigation.replace?.('PantallaActivacionContrasena') ?? navigation.navigate('PantallaActivacionContrasena');
+    /*navigation.replace?.('PantallaActivacionContraseña') ??*/ navigation.navigate('PantallaActivacionContraseña');
   };
 
   return (

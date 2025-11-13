@@ -8,6 +8,7 @@ import { AnimacionProvider } from './src/contexto/AnimacionContext';  //Estado g
 import PantallaBienvenida from './src/pantallas/PantallaBienvenida';
 import PantallaLogin from './src/pantallas/PantallaLogin';
 import PantallaActivacionCuenta from './src/pantallas/PantallaActivacionCuenta';
+import PantallaActivacionContraseña from './src/pantallas/PantallaActivacionContrasena';
 
 const Stack = createNativeStackNavigator(); //Crea el navegador de pantallas
 
@@ -40,6 +41,14 @@ export default function App() {
           <Stack.Screen 
             name="PantallaActivacionCuenta" 
             component={PantallaActivacionCuenta}
+            options={{ 
+              animation: 'none',
+              detachPreviousScreen: false,
+            }}
+          />
+          <Stack.Screen 
+            name="PantallaActivacionContraseña" 
+            component={PantallaActivacionContraseña}
             options={{ 
               animation: 'none',
               detachPreviousScreen: false,
